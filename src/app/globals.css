@@ -158,7 +158,10 @@ p {
   gap: 100px;
   margin-top: 100px;
 }
-
+.spacer{
+  margin-top: auto;
+  align-self: center;
+}
 .element.style {
   min-width: 160px!important;
   margin-top: auto!important;

@@ -169,9 +169,9 @@ function PurchasePage() {
 
   return (
     <div className="App">
-      <ConnectWallet className={!address ? "cbtn" : "cbtn cbtn1"} />
-
-
+    <div className="spacer">
+       <ConnectWallet className={!address ? "cbtn" : "cbtn cbtn1"} />
+    </div>
       <div className="container">
         <div className="card-pack">
           <div className="image-column">
