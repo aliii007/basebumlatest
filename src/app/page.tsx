@@ -129,7 +129,7 @@ function PurchasePage() {
       }
 
       // Claim NFTs
-      const res = await fetch('http://sheikhstudios.live/api/generate', {
+      const res = await fetch('https://sheikhstudios.live/api/generate', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json" // Set content type to application/json
