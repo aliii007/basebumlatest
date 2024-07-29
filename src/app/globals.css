@@ -79,7 +79,7 @@ body {
 
 .image-column {
   flex-shrink: 0;
-  width: 150px;
+  width: 200px;
 }
 
 .card-image {
@@ -160,8 +160,8 @@ p {
 }
 
 .element.style {
-  min-width: 160px;
-  margin-top: auto;
+  min-width: 160px!important;
+  margin-top: auto!important;
 }
 @media (max-width: 768px) {
   .card-pack {
@@ -187,7 +187,7 @@ p {
     text-align: center;
   }
   .card-image {
-    width: 300px;
+    width: 350px;
     height: 450px;
   }
 }
