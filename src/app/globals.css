@@ -159,6 +159,10 @@ p {
   margin-top: 100px;
 }
 
+element.style {
+  min-width: 160px;
+  margin-top: auto;
+}
 @media (max-width: 768px) {
   .card-pack {
     flex-direction: column;
