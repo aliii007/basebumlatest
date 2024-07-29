@@ -194,7 +194,7 @@ p {
     height: 450px;
   }
   .spacer{
-    margin-top: auto;
+    margin-top: 20px;
     align-self: center;
   }
 }
