@@ -193,4 +193,8 @@ p {
     width: 350px;
     height: 450px;
   }
+  .spacer{
+    margin-top: auto;
+    align-self: center;
+  }
 }
