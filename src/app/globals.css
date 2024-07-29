@@ -79,6 +79,7 @@ body {
 
 .image-column {
   flex-shrink: 0;
+  width: 150px;
 }
 
 .card-image {
