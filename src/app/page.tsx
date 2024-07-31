@@ -74,6 +74,10 @@ function PurchasePage() {
   const [clientSecret, setClientSecret] = useState("");
 
   const onClick = async () => {
+    if (!address) {
+      alert("Please connect your wallet first.");
+      return;
+    }
     const resp = await fetch("/api/stripe-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
