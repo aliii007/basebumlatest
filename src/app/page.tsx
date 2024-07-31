@@ -205,7 +205,7 @@ function PurchasePage() {
                 <button
                   className="pay-button"
                   onClick={onClick}
-                  disabled={!address}
+                  //disabled={!address}
                 >
                   Buy with credit card
                 </button>
