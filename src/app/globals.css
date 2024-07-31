@@ -34,11 +34,16 @@
   }
 }
 
-body {
+body,html {
   color: rgb(var(--foreground-rgb));
   background-color: #161519;
   color: white;
   overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .p-12 {
@@ -90,6 +95,7 @@ body {
 .details-column {
   text-align: left;
   flex-grow: 1;
+  align-items: center;
 }
 
 h2 {
@@ -140,6 +146,7 @@ p {
   cursor: pointer;
   font-size: 1em;
   display: inline-block;
+  max-width: 300px; /* Adjust max-width as needed */
 }
 
 .crypto-button {
