@@ -217,7 +217,6 @@ function PurchasePage() {
                 </Elements>
               )}
               {/* <button className="crypto-button" onClick={onClickCrypto}>Pay with Crypto</button> */}
-
             </div>
           </div>
         </div>
@@ -238,6 +237,8 @@ function PurchasePage() {
       </div>
     </div>
   );
+
+  
 }
 
 function PurchasePage1() {
