@@ -150,8 +150,8 @@ function PurchasePage() {
       console.log(`Claimed NFTs with tokenIds ${tokenIds.join(', ')}: `, responseBody);
 
       // Show success alert
-      alert(`Successfully claimed NFTs with tokenIds ${tokenIds.join(', ')}`);
-      alert('NFT MINTED');
+      // alert(`Successfully claimed NFTs with tokenIds ${tokenIds.join(', ')}`);
+      // alert('NFT MINTED');
     } catch (error) {
       console.error("Error during minting process: ", error);
 
