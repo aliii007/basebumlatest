@@ -74,10 +74,7 @@ function PurchasePage() {
   const [clientSecret, setClientSecret] = useState("");
 
   const onClick = async () => {
-    if (!address) {
-      alert("Please connect your wallet first.");
-      return;
-    }
+
     const resp = await fetch("/api/stripe-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -174,6 +171,7 @@ function PurchasePage() {
   return (
     <div className="App">
       <div className="spacer">
+        <h3>Connect Your Wallet First </h3>
         <ConnectWallet className={!address ? "cbtn" : "cbtn cbtn1"} />
       </div>
       <div className="container">
@@ -205,7 +203,7 @@ function PurchasePage() {
                 <button
                   className="pay-button"
                   onClick={onClick}
-                  //disabled={!address}
+                  disabled={!address}
                 >
                   Buy with credit card
                 </button>
