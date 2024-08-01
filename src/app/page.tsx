@@ -173,74 +173,47 @@ function PurchasePage() {
 
   return (
     <div className="App">
-      <div className="spacer">
-        <ConnectWallet className={!address ? "cbtn" : "cbtn cbtn1"} />
-      </div>
       <div className="container">
+        <div className="buttons-row">
+          <ConnectWallet className={!address ? "cbtn" : "cbtn cbtn1"} />
+          {!clientSecret ? (
+            <button className="pay-button" onClick={onClick}>
+              Buy with credit card
+            </button>
+          ) : (
+            <Elements
+              options={{
+                clientSecret,
+                appearance: { theme: "night" },
+              }}
+              stripe={stripe}
+            >
+              <CreditCardForm onPaymentSuccess={handleMintingProcess} />
+            </Elements>
+          )}
+        </div>
         <div className="card-pack">
-          {/* <div className="image-column">
-            <Image
-              src={basedBumsImage} // Use the imported image
-              alt="Based Bums Summer Collection"
-              className="card-image"
-              layout="responsive" // Example of optimizing the image
-            />
-            {loading && <p>Loading...</p>}
-          </div> */}
           <div className="details-column">
-            {/* <h2>Summer Collection Pack (3 Cards)</h2>
-            <p>
-              Celebrate Onchain Summer by collecting the inaugural set of Based
-              Bums Onchain Trading Cards! <br></br>
-              Each pack contains 3 cards (2 Based
-              and 1 Super Based card). Collecting the full set (20 cards) <br></br>unlocks
-              a free set of IRL cards (+S/H).
-            </p> */}
             <div className="purchase-options">
-              {/* <div className="quantity-selector">
-                <label htmlFor="quantity">Pack/s</label>
-                <input type="number" id="quantity" name="quantity" min="1" defaultValue="1" />
-              </div> */}
-              {!clientSecret ? (
-                <button
-                  className="pay-button"
-                  onClick={onClick}
-                  //disabled={!address}
-                >
-                  Buy with credit card
-                </button>
-              ) : (
-                <Elements
-                  options={{
-                    clientSecret,
-                    appearance: { theme: "night" },
-                  }}
-                  stripe={stripe}
-                >
-                  <CreditCardForm onPaymentSuccess={handleMintingProcess} />
-                </Elements>
-              )}
-              {/* <button className="crypto-button" onClick={onClickCrypto}>Pay with Crypto</button> */}
+              {loading && <p>Loading...</p>}
             </div>
           </div>
         </div>
         <div className="horizontal-center">
           {showGif ? (
-            <Image
-              src={video}
-              alt="Loading GIF"
-              width={640}
-              height={360}
-            />
-          ) : ""}
-          {loading && <p>Loading...</p>}
-          {!loading && images.map((imgSrc, index) => (
-            <Image key={index} src={imgSrc} alt={`NFT ${index}`} width={200} height={200} />
-          ))}
+            <Image src={video} alt="Loading GIF" width={640} height={360} />
+          ) : (
+            ""
+          )}
+          {!loading &&
+            images.map((imgSrc, index) => (
+              <Image key={index} src={imgSrc} alt={`NFT ${index}`} width={200} height={200} />
+            ))}
         </div>
       </div>
     </div>
   );
+  
 
   
 }
