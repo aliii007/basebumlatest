@@ -170,8 +170,9 @@ function PurchasePage() {
 
   return (
     <div className="App">
+      <h3>Connect Your Wallet First </h3>
       <div className="spacer">
-        <h3>Connect Your Wallet First </h3>
+        
         <ConnectWallet className={!address ? "cbtn" : "cbtn cbtn1"} />
       </div>
       <div className="container">
